@@ -1,1 +1,3 @@
-# ndahiro6.github.io
+# Welcome!!
+
+# Thank you for checking my page
