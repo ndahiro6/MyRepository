@@ -3,10 +3,6 @@ p<-dim(X)[2]
 S<-10000
 source("regression_gprior.R")
 
-## Don't run it again if you've already run it
-#runmcmc<-!any(system("ls",intern=TRUE)=="diabetesBMA.RData")
-#if(!runmcmc){ load("diabetesBMA.RData") }
-
 if(runmcmc){
   
   BETA<-Z<-matrix(NA,S,p)
@@ -35,7 +31,7 @@ if(runmcmc){
       plot(c(1,s),range(Zcp),type="n") ; apply(Zcp,2,lines)
     }
   } 
-  save(BETA,Z,file="diabetesBMA.RData")
+  save(BETA,Z,file="stats.RData")
 }
 #### Figure 9.7
 pdf("fig9_7.pdf",family="Times",height=1.75,width=5)
